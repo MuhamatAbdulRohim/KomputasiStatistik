@@ -1,0 +1,287 @@
+library(shiny)
+library(gamlss)
+library(datasets)
+library(car)
+data(cars)
+data(aids)
+
+# Define server logic for random distribution application
+shinyServer(function(input, output, session) {
+
+  header<-reactive({switch(input$input.header, 
+           "TRUE"=TRUE,
+           "FALSE"=FALSE)
+           })
+
+dataset2<- reactive({
+  
+a1<-do.call("rPO", args=list(n=input$byk.data.poisson,mu=input$mu_poisson))        
+  })  
+  
+  
+
+output$bangkit_poisson<- renderPrint({
+ a<-dataset2() 
+ })
+
+ output$pilih.ploting_poisson<- renderPlot({
+ 
+plot(function(y) dPO(y, mu=input$mu_poisson ), from=input$b.kiri_poisson, to=input$b.kanan_poisson, n=input$b.kanan_poisson+1, type="h") 
+ })
+  
+  output$pilih.ploting2_poisson<- renderPlot({
+if(input$pilihplot=="barplot1"){
+tN <- table(Ni <- c(dataset2()))
+r <- barplot(tN, col='lightblue')
+} 
+if(input$pilihplot=="histdist1"){
+a1<-do.call("histDist", args=list(y=dataset2(),family=PO)
+   )
+ }
+ 
+ })
+ 
+ 
+output$bangkit_poisson_tampil <- renderPrint({
+    
+    print(head(dataset2(),input$byk.data.poisson.tampil))
+    })
+    
+output$ringkasan.data1 <- renderPrint({
+    
+    print(summary(dataset2()))
+    })
+
+
+
+  
+  
+  dataset3<- reactive({
+  
+a1<-do.call("rZIP", args=list(n=input$byk.data.zip,mu=input$mu_zip,sigma=input$sigma_zip))
+  a1         
+  })  
+  
+  output$bangkit_zip<- renderPrint({
+ a<-dataset3() 
+ })
+
+ output$pilih.ploting_zip<- renderPlot({
+ 
+plot(function(y) dZIP(y, mu=input$mu_zip,sigma=input$sigma_zip), from=input$b.kiri_zip, to=input$b.kanan_zip, n=input$b.kanan_zip+1, type="h") 
+ })
+  
+  output$pilih.ploting2_zip<- renderPlot({
+ if(input$pilihplot2=="barplot2"){
+tN <- table(Ni <- c(dataset3()))
+r <- barplot(tN, col='lightblue')
+ 
+ }
+if(input$pilihplot2=="histdist2"){
+a1<-do.call("histDist", args=list(y=dataset3(),family=ZIP)
+   )
+ }
+ }
+ )
+output$bangkit_zip_tampil <- renderPrint({
+    
+    print(head(dataset3(),input$byk.data.zip.tampil))
+    })
+    
+    
+output$ringkasan.data.zip <- renderPrint({
+    
+    print(summary(dataset3()))
+    })
+
+
+  
+  dataset4<- reactive({
+  
+a1<-do.call("rPIG", args=list(n=input$byk.data.pig,mu=input$mu_pig,sigma=input$sigma_pig))
+  a1         
+  })  
+  
+  output$bangkit_pig<- renderPrint({
+ a<-dataset4() 
+ })
+
+ output$pilih.ploting_pig<- renderPlot({
+ 
+plot(function(y) dPIG(y, mu=input$mu_pig,sigma=input$sigma_pig ), from=input$b.kiri_pig, to=input$b.kanan_pig, n=input$b.kanan_pig+1, type="h") 
+ })
+  
+  output$pilih.ploting2_pig<- renderPlot({
+  if(input$pilihplot3=="barplot3"){
+ tN <- table(Ni <- c(dataset4()))
+r <- barplot(tN, col='lightblue')
+ 
+ }
+if(input$pilihplot3=="histdist3"){
+a1<-do.call("histDist", args=list(y=dataset4(),family=PIG)
+   )
+ }
+ }
+ ) 
+
+output$bangkit_pig_tampil <- renderPrint({
+    
+    print(head(dataset4(),input$byk.data.pig.tampil))
+    })
+    
+    
+output$ringkasan.data.pig <- renderPrint({
+    
+    print(summary(dataset4()))
+    })
+
+  
+output$plot3dist<- renderPlot({
+if(input$pilih.distribusi1=="POISSON"){
+x<-seq(input$b.kiri1,input$b.kanan1,1)
+y1<-dPIG(x, mu = input$mudist1, log = FALSE) 
+plot(x,y1,col="red",type="h") 
+}
+if(input$pilih.distribusi1=="ZIP"){
+x<-seq(input$b.kiri1,input$b.kanan1,1)
+y1<-dZIP(x, mu = input$mudist1, sigma = input$sigmadist1, log = FALSE) 
+plot(x,y1,col="red",type="h")
+ }
+if(input$pilih.distribusi1=="PIG"){
+x<-seq(input$b.kiri1,input$b.kanan1,1)
+y1<-dPIG(x, mu = input$mudist1, sigma = input$sigmadist1, log = FALSE) 
+plot(x,y1,col="red",type="h") 
+} 
+
+if(input$pilih.distribusi1=="IG"){
+x<-seq(input$b.kiri1,input$b.kanan1,0.1)
+y1<-dIG(x, mu = input$mudist1, sigma = input$sigmadist1, log = FALSE) 
+plot(x,y1,col="red",type="l") 
+} 
+
+if(input$pilih.distribusi2=="POISSON"){
+x<-seq(input$b.kiri1,input$b.kanan1,1)
+y2<-dPO(x, input$mudist2,log = FALSE)
+y3<-points(x,y2,col="blue",type="h")
+ }
+if(input$pilih.distribusi2=="ZIP"){
+x<-seq(input$b.kiri1,input$b.kanan1,1)
+y2<-dZIP(x, input$mudist2,input$sigmadist2,log = FALSE)
+y3<-points(x,y2,col="blue",type="h")
+ }  
+if(input$pilih.distribusi2=="PIG"){
+x<-seq(input$b.kiri1,input$b.kanan1,1)
+y2<-dPIG(x, input$mudist2,input$sigmadist2,log = FALSE)
+y3<-points(x,y2,col="blue",type="h")
+ }   
+ 
+ 
+if(input$pilih.distribusi3=="POISSON"){
+x<-seq(input$b.kiri1,input$b.kanan1,1)
+y2<-dPO(x, input$mudist3,log = FALSE)
+y3<-points(x,y2,col="darkgreen",type="h")
+ }
+
+if(input$pilih.distribusi3=="ZIP"){
+x<-seq(input$b.kiri1,input$b.kanan1,1)
+y2<-dZIP(x, input$mudist3,input$sigmadist3,log = FALSE)
+y3<-points(x,y2,col="darkgreen",type="h")
+ }  
+if(input$pilih.distribusi3=="PIG"){
+x<-seq(input$b.kiri1,input$b.kanan1,1)
+y2<-dPIG(x, input$mudist3,input$sigmadist3,log = FALSE)
+y3<-points(x,y2,col="darkgreen",type="h")
+ } 
+  
+ }
+ )
+
+  output$plot4dist.poisson<- renderPlot({
+ 
+plot(function(y) dPO(y, mu=input$mudist1 ), from=input$b.kiri1, to=input$b.kanan1, n=input$b.kanan_poisson+1, type="h") 
+ })
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}
+)

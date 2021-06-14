@@ -1,0 +1,425 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Distribusi | Statistika | UNEJ 2020</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/logo-unej.png">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="../shiny/shiny.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="../shiny/shiny.css"/>
+</head>
+
+<body>
+<!-- site header -->
+<header id="site-header" class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo-unej.png" class="img-fluid m-auto" style="max-height: 80px">FMIPA UNEJ
+        </a>
+        <button class="navbar-toggler bg-gradient" type="button" data-toggle="collapse"
+                data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active" id="beranda">
+                    <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" id="deskripsi">
+                    <a class="nav-link" href="#description">Deskripsi</a>
+                </li>
+                <li class="nav-item" id="tentang-kami">
+                    <a class="nav-link" href="#team">Tentang Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-info btn-style" href="simulasi/index.html">Simulasi</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- //site header -->
+
+<!-- banner section -->
+<section id="home" class="banner">
+    <div id="banner-bg-effect" class="banner-effect"></div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-md-12 col-sm-12 order-lg-first mt-lg-0 mt-4">
+                <h1 class="mb-4 title"><strong>Doing </strong>the right thing, <br>at the <strong>right time.</strong>
+                </h1>
+                <p>Website ini dikembangkan agar menjadi media pembelajaran interaktif khususnya dibidang ilmu
+                    statistika. Website ini akan mengenalkan beberapa jenis distribusi yang ada, seperti Beta-Binomial,
+                    Normal-normal dan Normal Family. Kami menyediakan informasi terkait materi yang disampaikan seperti
+                    pengenalan distribusi sampai pada fitur utama yaitu, menampilkan data distribusi secara visualisasi
+                    yang bisa mempermudah teman-teman dalam mempelajarinya. Semoga bermanfaat</p>
+                <div class="mt-5">
+                    <a class="btn btn-primary btn-style mr-2" href="simulasi/index.html">Mulai Belajar <i
+                            class="fa fa-arrow-right"></i> </a>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 col-sm-12 order-first text-lg-left text-center">
+                <div>
+                    <img src="assets/images/home.png" alt="" class="rounded-top rounded-bottom img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //banner section -->
+
+<!-- home page about -->
+<section class="w3l-about" id="description">
+    <div class="container">
+        <div class="row about-content">
+            <div class="col-lg-6 info mb-lg-0 mb-sm-5 mb-4 align-center">
+                <h3 class="title">Deskripsi</h3>
+                <h6>Kami hadir untuk membantu teman-teman dalam hal memperdalam ilmu statistika</h6>
+                <p class="mt-md-4 mt-3 mb-0"> Website interaktif ini dikembangkan sejak tahun 2020. Kami mengembangkan
+                    website ini dengan menggunakan bahasa R yang dikombinasikan dengan basic HTML, JavaScript, Jquery
+                    dll.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="assets/images/about.png" class="img-fluid img-shadow" alt="about">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //home page about -->
+
+<!-- home page service grids -->
+<section id="services" class="bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
+                <h4 class="section-title">Materi Pembelajaran</h4>
+                <p class="text-center">Teman-teman bisa langsung masuk ke menu simulasi untuk menerima beberapa materi
+                    pembelajaran beserta pemaparan informasi grafis</p>
+            </div>
+        </div>
+        <div class="row mt-lg-5">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="box-wrap">
+                    <div class="icon">
+                        <span class="fa fa-book"></span>
+                    </div>
+                    <h4><a href="#url">Distribusi <br> Beta - Binomial</a></h4>
+                    <p>Distribusi beta-binomial <span class="text-danger">$p(X=x)\; \text{atau} \;p(x)$</span> adalah
+                        keluarga distribusi probabilitas diskrit. Distribusi <span class="text-danger">$\beta$</span>
+                        Beta digunakan sebagai prior konjugat untuk binomial,
+                        karena distribusi Beta dan Distribusi Binomial memiliki kesamaan bentuk
+                        fungsional likelihood.</p>
+                    <br>
+                    <a class="btn btn-primary btn-style" href="simulasi/index.html">Lanjutkan Membaca <i
+                            class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="box-wrap">
+                    <div class="icon">
+                        <span class="fa fa-book"></span>
+                    </div>
+                    <h4><a href="#url">Distribusi<br> Normal - Normal</a></h4>
+                    <p>Jika Distribusi Normal memiliki 2 parameter yaitu <span class="text-danger">$\mu$</span>
+                        dan <span class="text-danger">$\sigma^2$</span> dan dua-duanya diketahui,
+                        maka Distribusi Normal-Normal terjadi jika nilai <span class="text-danger">$\sigma$</span>
+                        diketahui, akan tetapi <span class="text-danger">$\mu$</span> merupakan
+                        variabel acak <span class="text-danger">$X$</span> yang juga berdistribusi
+                        Normal (<span class="text-danger">$\mu \sim N(\mu_0,\sigma_0^2)$</span>,
+                        dengan <span class="text-danger"> $\mu_0$ </span> dan <span
+                                class="text-danger">$\sigma_0$ </span>diketahui).</p>
+                    <br>
+                    <a class="btn btn-primary btn-style" href="simulasi/index.html">Lanjutkan Membaca <i
+                            class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="box-wrap">
+                    <div class="icon">
+                        <span class="fa fa-book"></span>
+                    </div>
+                    <h4><a href="#url">Distribusi<br> Normal Family</a></h4>
+                    <p>NOF dinotasikan dengan <span class="text-danger">$N(\mu,\sigma,v)$</span> pada
+                        dasarnya adalah Distribusi Normal yang memiliki tiga parameter, dengan mean
+                        <span class="text-danger">$\mu$</span> dan variansi <span class="text-danger">$\sigma |\mu|^\frac{v}{2}$</span>.
+                        NOF mendefinisikan keluarga distribusi normal, yang memiliki tiga parameter. Distribusi dapat
+                        digunakan menggunakan fungsi gamlss.</p>
+                    <br>
+                    <a class="btn btn-primary btn-style" href="simulasi/index.html">Lanjutkan Membaca <i
+                            class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //home page service grids -->
+
+<!-- testimonials section -->
+<section class="w3l-team-main-6" id="team">
+    <!-- /team-grids -->
+    <div class="team-content">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
+                    <h4 class="section-title">Team Develop</h4>
+                    <p class="text-center">Selamat datang di website kami, semoga anda mendapatkan pengetahuan baru
+                        disini dan jangan lupa share website kami ke teman-teman lain, agar yang lain juga bisa
+                        mendapatkan ilmu pengetahuan yang anda dapatkan disini.</p>
+                </div>
+            </div>
+            <div class="row grid-col-4 text-center mt-5">
+                <div class="team-colomn col-lg-6 col-md-6 col-sm-6">
+                    <div class="team-main-6">
+                        <a href="#team-single.html"><img class="img-fluid" src="assets/images/fer.png" alt=" "
+                                                         style="max-height: 230px"></a>
+                        <h6><a href="#team-single.html" class="title-team-31">Ferry wiranto</a></h6>
+                        <p class="sm-text-32">Ferrywr25@gmail.com</p>
+                        <p class="sm-text-32">Situbondo</p>
+                        <div class="social-teams mt-2">
+                            <a class="facebook" href="https://web.facebook.com/fierryz.fiestrerz" target="_blank"><span
+                                    class="fa fa-facebook" aria-hidden="true"></span></a>
+                            <a class="twitter" href="https://twitter.com/Ferrywr25" target="_blank"><span
+                                    class="fa fa-twitter" aria-hidden="true"></span></a>
+                            <a class="insta" href="https://www.instagram.com/ferrywr25/" target="_blank"><span
+                                    class="fa fa-instagram" aria-hidden="true"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-colomn col-lg-6 col-md-6 col-sm-6 mt-md-0 mt-5">
+                    <div class="team-main-6">
+                        <a href="#team-single.html"><img class="img-fluid" style="max-height: 230px"
+                                                         src="assets/images/him.png" alt=" "></a>
+                        <h6><a href="#team-single.html" class="title-team-30">Muhamat Abdul Rohim</a></h6>
+                        <p class="sm-text-30" style="font-size: 10pt">muhamatabdulrohim@gmail.com</p>
+                        <p class="sm-text-30">Lumajang</p>
+                        <div class="social-teams mt-2">
+                            <a class="facebook" href="#" target="_blank"><span class="fa fa-facebook"
+                                                                               aria-hidden="true"></span></a>
+                            <a class="twitter" href="#" target="_blank"><span class="fa fa-twitter"
+                                                                              aria-hidden="true"></span></a>
+                            <a class="insta" href="#" target="_blank"><span class="fa fa-instagram"
+                                                                            aria-hidden="true"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /team-grids -->
+</section>
+<!--//testimonials section -->
+
+<!-- stats section -->
+<section id="stats" class="stats">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 margin-md-60">
+                <h2 class="left-title">Referensi Materi</h2>
+                <p class="white">Kami akan menyertakan informasi sumber referensi yang kami gunakan dalam pengembangan
+                    website interaktif ini. Kritik dan masukan akan kami tindaklanjuti, anda bisa menghubungi kami di
+                    via email. Dan jangan lupa teman-teman bisa saling berbagi pengetahuuan terhadap sesama.</p>
+            </div>
+            <div class="col-lg-7 mt-lg-0 mt-5">
+                <div class="d-sm-flex justify-content-lg-around justify-content-between counter-main">
+                    <div class="counter">
+                        <div class="icon">
+                            <span class="fa fa-folder-open-o"></span>
+                        </div>
+                        <p class="value">3</p>
+                        <p class="title white">Jurnal</p>
+                    </div>
+                    <div class="counter">
+                        <div class="icon">
+                            <span class="fa fa-globe"></span>
+                        </div>
+                        <p class="value">10</p>
+                        <p class="title white">Website</p>
+                    </div>
+                    <div class="counter">
+                        <div class="icon">
+                            <span class="fa fa-trophy"></span>
+                        </div>
+                        <p class="value">8</p>
+                        <p class="title white">Project</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //stats section -->
+<section></section>
+<!-- site footer -->
+<footer id="site-footer">
+    <div class="top-footer">
+        <div class="container my-md-5 my-4">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-logo mb-3">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="assets/images/logo-unej.png" class="img-fluid m-auto" style="max-height: 60px">
+                            FMIPA UNEJ
+                        </a>
+                    </div>
+                    <div>
+                        <p>Kritik dan masukan akan kami tindaklanjuti, anda bisa menghubungi kami di via email. Dan
+                            jangan lupa teman-teman bisa saling berbagi pengetahuuan terhadap sesama.</p>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-4 mt-lg-0 mt-5">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-list">
+                        <li><a href="simulasi/index.html"> Simulasi</a></li>
+                        <li><a href="#team"> Team</a></li>
+                        <li><a href="#description"> Deksripsi</a></li>
+                    </ul>
+                </div>
+                <!-- Newsletter -->
+                <div class="col-lg-5 col-md-8 mt-lg-0 mt-5">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="mb-4">By subscribing to our mailing list you will always be updated with the latest news
+                        from us.
+                    </p>
+                    <form class="newsletter-form">
+                        <input class="input-rounded" type="text" required="" placeholder="Enter Email Address">
+                        <button type="submit" title="Subscribe" class="btn btn-primary btn-style" name="submit"
+                                value="Submit">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-lg-center text-center mb-lg-0">
+                    <p class="copyright" style="text-align: center;">© 2020 Captivate. All Rights Reserved. Edited By
+                        Our Team</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- //site footer -->
+
+<!-- move top -->
+<button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
+    <span class="fa fa-angle-up"></span>
+</button>
+
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("movetop").style.display = "block";
+        } else {
+            document.getElementById("movetop").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+<!-- //move top -->
+
+<!-- javascript -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+
+<!-- libhtbox -->
+<script src="assets/js/lightbox-plus-jquery.min.js"></script>
+
+<!-- particles -->
+<script src='assets/js/particles.min.js'></script>
+<script src="assets/js/script.js"></script>
+<!-- //particles -->
+
+<!-- owl carousel -->
+<script src="assets/js/owl.carousel.js"></script>
+<script>
+    $(document).ready(function () {
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            margin: 10,
+            nav: true,
+            loop: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                767: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    })
+</script>
+
+<!-- disable body scroll which navbar is in active -->
+<script>
+    $(function () {
+        $('.navbar-toggler').click(function () {
+            $('body').toggleClass('noscroll');
+        });
+        $("#deskripsi").click(function () {
+            $("#beranda").removeClass('active');
+            $("#tentang-kami").removeClass('active');
+            $("#deskripsi").addClass('active');
+        });
+        $("#beranda").click(function () {
+            $("#deskripsi").removeClass('active');
+            $("#tentang-kami").removeClass('active');
+            $("#beranda").addClass('active');
+        });
+        $("#tentang-kami").click(function () {
+            $("#beranda").removeClass('active');
+            $("#deskripsi").removeClass('active');
+            $("#tentang-kami").addClass('active');
+        });
+    });
+</script>
+<!-- disable body scroll which navbar is in active -->
+
+<!-- bootstrap -->
+<script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+</html>
