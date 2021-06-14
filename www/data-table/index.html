@@ -1,0 +1,737 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Data Table | Statistika | UNEJ 2020</title>
+    <link rel="icon" href="../assets/images/logo-unej.png">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+
+
+
+
+
+
+
+
+
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+
+
+
+
+
+
+
+
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="../shiny/shiny.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="../shiny/shiny.css"/>
+</head>
+
+<body class="sidebar-menu-collapsed">
+<div class="se-pre-con"></div>
+<section>
+    <!-- sidebar menu start -->
+    <div class="sidebar-menu sticky-sidebar-menu">
+
+        <!-- logo start -->
+        <div class="logo">
+            <h1><a href="index.html">DATA TABLE</a></h1>
+        </div>
+
+        <!-- if logo is image enable this -->
+        <!-- image logo --
+        <div class="logo">
+          <a href="index.html">
+            <img src="image-path" alt="Your logo" title="Your logo" class="img-fluid" style="height:35px;" />
+          </a>
+        </div>
+        //image logo -->
+
+        <div class="logo-icon text-center">
+            <a href="index.html" title="logo"><img src="assets/images/logo.png" alt="logo-icon"> </a>
+        </div>
+        <!-- //logo end -->
+        <div class="sidebar-menu-inner">
+            <!-- sidebar nav start -->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li class="active"><a href="index.html"><i class="fa fa-tachometer"></i><span> Dashboard</span></a>
+                </li>
+            </ul>
+            <!-- //sidebar nav end -->
+            <!-- toggle button start -->
+            <a class="toggle-btn">
+                <i class="fa fa-angle-double-left menu-collapsed__left"><span>Collapse Sidebar</span></i>
+                <i class="fa fa-angle-double-right menu-collapsed__right"></i>
+            </a>
+            <!-- //toggle button end -->
+        </div>
+    </div>
+    <!-- //sidebar menu end -->
+    <!-- header-starts -->
+    <div class="header sticky-header">
+        <div class="menu-right">
+            <div class="navbar user-panel-top">
+                <a class="btn btn-danger" title="Kembali" href="../index.html">Kembali</a>
+            </div>
+        </div>
+    </div>
+    <!-- //header-ends -->
+    <!-- main content start -->
+    <div class="main-content">
+
+        <!-- content -->
+        <div class="container-fluid content-top-gap">
+            <div class="chart">
+                <div class="row">
+                    <div class="col-lg-12 chart-grid">
+                        <div class="welcome-msg pt-3 pb-4">
+                            <h1>Hi, Selamat datang di halaman <span class="text-primary">SIMULASI DATA TABLE</span></h1>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five
+                                centuries, but also the leap into electronic typesetting, remaining essentially
+                                unchanged.
+                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                                Ipsum
+                                passages, and more recently with desktop publishing software like Aldus PageMaker
+                                including
+                                versions of Lorem Ipsum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 chart-grid">
+                        <div class="card text-center card_border">
+                            <div class="card-header chart-grid__header bg-info text-white">
+                                Pre-processing Data
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 text-left">
+                                        <div class="form-group">
+                                            <label>Pilih Jenis Input</label>
+                                            <select id="input_type" class="form-control">
+                                                <option value="csv">CSV</option>
+                                                <option value="data_from_r">Data From R</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group" id="data_r-area" style="display: none">
+                                            <select class="form-control" id="terserah_samean">
+                                                <option value="" selected>-- Pilih Data --</option>
+                                                <option value="CD4">CD4</option>
+                                                <option value="LGAclaims">LGAClaims</option>
+                                                <option value="iris">Iris</option>
+                                                <option value="alveolar">Alveolar</option>
+                                                <option value="trees">Trees</option>
+                                                <option value="orange">Orange</option>
+                                                <option value="udah_udah">Udah Udah Gitu Aja Dah</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group" id="local_file-area">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" name="avalidatedCustomFile" id="avalidatedCustomFile"
+                                                       required>
+                                                <label class="custom-file-label" for="avalidatedCustomFile">Choose
+                                                    file...</label>
+                                                <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                            </div>
+                                            <label>Separator</label>
+                                            <select class="form-control" id="separator">
+                                                <option value=",">,</option>
+                                                <option value=";">;</option>
+                                                <option value=" ">Tab</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //bar chart -->
+                        </div>
+                    </div>
+                    <div class="col-lg-7 chart-grid">
+                        <div class="card text-center card_border">
+                            <div class="card-header chart-grid__header bg-info text-white">
+                                Result
+                            </div>
+                            <div class="card-body">
+                            <pre id="data_table.sum_Ringkasan"
+                                 class="shiny-text-output text-danger mt-2"></pre>
+                            </div>
+                            <!-- //bar chart -->
+                        </div>
+                    </div>
+                    <!-- disini normal-normal-->
+                    <div class="col-lg-12 chart-grid">
+                        <div class="card text-center card_border">
+                            <div class="card-header chart-grid__header bg-info text-white">
+                                Normal-Normal
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 text-left">
+                                        <p class="text-white badge badge-primary p-3 float-right">Ditulis Oleh : Muhamat
+                                            Abdul Rohim </p><br/>
+                                        <p class="text-white badge badge-info p-3">Distribusi Normal</p>
+                                        <p class="text-justify pt-2">
+                                            <a href="referensi/andi_setiawan.pdf" class="text-info"
+                                               title="Lihat Referensi" target="_blank">(Adi Setiawan, 2015:73)</a>
+                                            menjelaskan bahwa Distribusi Normal sering juga disebut dengan Distribusi
+                                            Gaussian. Peubah
+                                            acax $X$
+                                            dikatakan berdistribusi Normal/Gaussian jika $X$ memiliki fungsi kepadatan
+                                            sebagai
+                                            berikut
+                                            <span class="text-primary">
+                                                $$f(x,\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp\left[-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2\right];\;-\infty < x < \infty$$
+                                            </span>
+                                            sedangkan menurut situs <a
+                                                href="https://www.rumusstatistik.com/2013/07/rumus-distribusi-normal-distribusi-gauss.html"
+                                                class="text-info" title="Lihat Referensi"
+                                                target="_blank">rumusstatistik.com</a> (diakses 30 Oktober 2020 09:45
+                                            WIB),
+                                            Distribusi ini memiliki dua parameter, yaitu <span
+                                                class="text-danger">$\mu$</span> dan <span
+                                                class="text-danger">$\sigma^2$</span>
+                                            sehingga
+                                            dinotasikan
+                                            dengan <span class="text-danger">$N(\mu,\sigma^2)$</span>, dan memiliki
+                                            nilai Mean dan Varian sebagai berikut
+                                            <span class="text-primary">
+                                            $$E(X)=\mu \text{ dan } Var(X) = \sigma^2$$
+                                                </span>
+                                            Distribusi Normal
+                                            mememiliki beberapa sifat <a href="referensi/andi_setiawan.pdf"
+                                                                         class="text-info" title="Lihat Referensi"
+                                                                         target="_blank">(Andi Setiawan, 2015:74)</a>,
+                                            diantaranya :
+                                        </p>
+                                        <ol class="text-muted">
+                                            <li>Karena <span class="text-danger">$f(x)$</span> merupakan fungsi
+                                                kepadatan probabilitas, maka <span class="text-danger">$f(x)\geq
+                                                0$</span>, untuk <span class="text-danger">$-\infty < x < \infty$</span>
+                                            </li>
+                                            <li>Grafik <span class="text-danger">$f(x)$</span> simetrik dengan <span
+                                                    class="text-danger">$x=\mu$</span> dan mempunyai titik belok <span
+                                                    class="text-danger">$x=\mu
+                                                \pm \sigma$</span>
+                                            </li>
+                                        </ol>
+                                        <div class="card mt-3">
+                                            <div class="card-header bg-primary text-white">
+                                                Visualisasi Distribusi Normal, $N(\mu,\sigma^2)$
+                                            </div>
+                                            <div class="card-body bg-light">
+                                                <div class="row">
+                                                    <div class="col-md-6 bg-white p-2">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label>Sample $(N)$</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.n_dash_normal"
+                                                                           min="100" value="100">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label>Mean/Mu $(\mu)$</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.mu_dash_normal"
+                                                                           min="1" value="30">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label>Sigma $(\sigma)$</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.sigma_dash_normal"
+                                                                           min="2" value="5">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="hist.dash_normal" class="shiny-plot-output"
+                                                             style="width: 100%; height: 300px"></div>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label>Min $x$</label>
+                                                                    <input type="number" class="form-control" value="10"
+                                                                           id="input.min_x_dash_normal">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6"></div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label>Max $x$</label>
+                                                                    <input type="number" class="form-control" value="50"
+                                                                           id="input.max_x_dash_normal">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <span class="badge badge-info p-2">Fungsi Kepadatan $N(\mu,\sigma^2)$</span>
+                                                        <span class="text-primary">
+                                                        $$f(x,\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}\exp\left[-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2\right];\;-\infty < x < \infty$$
+                                                    </span>
+                                                        <span class="badge badge-info p-2 mt-2">Summary Data</span>
+                                                        <pre class="shiny-text-output text-danger mt-2"
+                                                             id="output.sum_dash_normal"></pre>
+                                                        <span class="badge badge-info p-2 mt-2">Varian</span>
+                                                        <pre class="shiny-text-output text-danger mt-2"
+                                                             id="output.var_dash_normal"></pre>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="text-white badge badge-info p-3 mt-3">Distribusi Normal-Normal</p>
+                                        <p class="text-justify pt-2">
+                                            <a href="" class="text-info" target="_blank" title="Lihat Referensi">(I Made
+                                                Tirta, 2014)</a> pada bukunya yang berjudul Pengantar Statistika
+                                            Matematika menjelaskan bahwa Distribusi Normal memiliki 2 parameter yaitu
+                                            <span class="text-danger">$\mu$</span>
+                                            dan <span class="text-danger">$\sigma^2$</span> dan dua-duanya diketahui,
+                                            sedangkan Distribusi Normal-Normal terjadi jika nilai <span
+                                                class="text-danger">$\sigma$</span>
+                                            diketahui, akan tetapi <span class="text-danger">$\mu$</span> merupakan
+                                            variabel acak <span class="text-danger">$X$</span> yang juga berdistribusi
+                                            Normal (<span class="text-danger">$\mu \sim N(\mu_0,\sigma_0^2)$</span>,
+                                            dengan <span class="text-danger"> $\mu_0$ </span> dan <span
+                                                class="text-danger">$\sigma_0$ </span>diketahui).
+                                        </p>
+                                        <p class="text-justify pt-2">
+                                            Fungsi Kepadatan Distribusi Normal-Normal tersebut adalah
+                                            <span class="text-primary">
+                                                $$f(x,\sigma,\sigma_0) = \frac{1}{2\sigma \sigma_0 \pi} exp \left[-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2-\frac{1}{2}\left(\frac{\mu - \mu_0}{\sigma_0}\right)^2\right]$$
+                                            </span>
+                                        </p>
+                                        <div class="card mt-3">
+                                            <div class="card-header bg-primary text-white">
+                                                Visualisasi Distribusi Normal-Normal, $N(\mu,\sigma^2)$ dengan $\mu \sim
+                                                N(\mu_0, \sigma_0^2)$
+                                            </div>
+                                            <div class="card-body bg-light">
+                                                <div class="row mt-3">
+                                                    <div class="col-md-6 bg-white p-2">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Sample $(N)$</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.n_dash_normal_normal"
+                                                                           min="100" value="100">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>Sigma $(\sigma)$</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.sigma_dash_normal_normal"
+                                                                           min="1" value="5">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <label>Hyper Parameter ($\mu_0, \sigma_0$)</label>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>$(\sigma_0)$</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.sigma_0_dash_normal_normal"
+                                                                           min="1" value="5">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <label>$(\mu_0)$</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.mu_0_dash_normal_normal"
+                                                                           min="1" value="30">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="hist.dash_normal_normal" class="shiny-plot-output"
+                                                             style="width: 100%; height: 300px"></div>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label>Min $x$</label>
+                                                                    <input type="number" class="form-control"
+                                                                           value="-50"
+                                                                           id="input.min_x_dash_normal_normal">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6"></div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label>Max $x$</label>
+                                                                    <input type="number" class="form-control"
+                                                                           value="100"
+                                                                           id="input.max_x_dash_normal_normal">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <span class="badge badge-info p-2 mt-2">Fungsi Kepadatan Distribusi Normal-Normal</span>
+                                                        <span class="text-primary">
+                                                            $$f(x,\sigma,\sigma_0) = \frac{1}{2\sigma \sigma_0 \pi} exp \left[-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2-\frac{1}{2}\left(\frac{\mu - \mu_0}{\sigma_0}\right)^2\right]$$
+                                                        </span>
+                                                        <span class="badge badge-info p-2 mt-2">Summary Data Distribusi Normal-Normal</span>
+                                                        <pre class="shiny-text-output text-danger mt-2"
+                                                             id="output.sum_dash_normal_normal"></pre>
+                                                        <span class="badge badge-info p-2 mt-2">Varian Distribusi Normal-Normal</span>
+                                                        <pre class="shiny-text-output text-danger mt-2"
+                                                             id="output.var_dash_normal_normal"></pre>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mt-3">
+                                            <div class="card-header bg-primary text-white">
+                                                Visualisasi Perbandingan Distribusi Normal dan Distribusi Normal-Normal
+                                            </div>
+                                            <div class="card-body bg-light">
+                                                <div class="row mt-3">
+                                                    <div class="col-md-12 p-2">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label>Sample $(N)$, digunakan semua distribusi
+                                                                        <br/>(Normal,
+                                                                        Prior, Normal-Normal)</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.n_dash_banding"
+                                                                           min="100" value="100">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label>Sigma $(\sigma)$, digunakan ditribusi <br/>Normal
+                                                                        dan Normal-Normal</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.sigma_dash_banding"
+                                                                           min="1" value="5">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label>Mu $(\mu)$, digunakan distribusi
+                                                                        <br/>Normal</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.mu_dash_banding"
+                                                                           min="1" value="30">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label>$(\sigma_0)$, digunakan <br/>Prior</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.sigma_0_dash_banding"
+                                                                           min="1" value="5">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label>$(\mu_0)$, digunakan <br/>Prior</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.mu_0_dash_banding"
+                                                                           min="1" value="30">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label>$x$ Min, digunakan semua distribusi <br/>(Normal,
+                                                                        Prior, Normal-Normal)</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.min_x_dash_banding"
+                                                                           min="1" value="-50">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label>$x$ Max, digunakan semua distribusi <br/>(Normal,
+                                                                        Prior, Normal-Normal)</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.max_x_dash_banding"
+                                                                           min="1" value="100">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 bg-white p-2">
+                                                        <div id="hist.dash_banding_normal" class="shiny-plot-output"
+                                                             style="width: 100%; height: 300px"></div>
+                                                        <span class="badge badge-info p-2 mt-2">Summary Data Distribusi Normal</span>
+                                                        <pre class="shiny-text-output text-danger mt-2"
+                                                             id="output.sum_dash_banding_normal"></pre>
+                                                        <span class="badge badge-info p-2 mt-2">Varian Distribusi Normal</span>
+                                                        <pre class="shiny-text-output text-danger mt-2"
+                                                             id="output.var_dash_banding_normal"></pre>
+                                                    </div>
+                                                    <div class="col-md-4 bg-white p-2">
+                                                        <div id="hist.dash_banding_prior" class="shiny-plot-output"
+                                                             style="width: 100%; height: 300px"></div>
+                                                        <span class="badge badge-info p-2 mt-2">Summary Data Distribusi Normal (Prior)</span>
+                                                        <pre class="shiny-text-output text-danger mt-2"
+                                                             id="output.sum_dash_banding_prior"></pre>
+                                                        <span class="badge badge-info p-2 mt-2">Varian Distribusi Normal (Prior)</span>
+                                                        <pre class="shiny-text-output text-danger mt-2"
+                                                             id="output.var_dash_banding_prior"></pre>
+                                                    </div>
+                                                    <div class="col-md-4 bg-white p-2">
+                                                        <div id="hist.dash_banding_normal_normal"
+                                                             class="shiny-plot-output"
+                                                             style="width: 100%; height: 300px"></div>
+                                                        <span class="badge badge-info p-2 mt-2">Summary Data Distribusi Normal-Normal</span>
+                                                        <pre class="shiny-text-output text-danger mt-2"
+                                                             id="output.sum_dash_banding_normal_normal"></pre>
+                                                        <span class="badge badge-info p-2 mt-2">Varian Distribusi Normal-Normal</span>
+                                                        <pre class="shiny-text-output text-danger mt-2"
+                                                             id="output.var_dash_banding_normal_normal"></pre>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //bar chart -->
+                        </div>
+                    </div>
+                    <div class="col-lg-12 chart-grid ">
+                        <div class="card text-center card_border">
+                            <div class="card-header chart-grid__header bg-info text-white">
+                                Normal Family (NOF pada gamlss)
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 text-left">
+                                        <p class="text-white badge badge-primary p-3 float-right">Ditulis Oleh : Muhamat
+                                            Abdul Rohim & Ferry Wiranto </p><br/>
+                                        <p class="text-white badge badge-info p-3">Distribusi Normal Family (NOF)</p>
+                                        <p class="text-justify pt-3">
+                                            <a href="referensi/gamlss.pdf" title="Lihat Referensi" class="text-info"
+                                               target="_blank">(Bob Rigby and Mikis Stasinopoulos, 2010:8) </a>NOF
+                                            dinotasikan dengan <span class="text-danger">$N(\mu,\sigma,v)$</span> pada
+                                            dasarnya adalah Distribusi Normal yang memiliki tiga parameter, dengan mean
+                                            <span class="text-danger">$\mu$</span> dan variansi <span
+                                                class="text-danger">$\sigma |\mu|^\frac{v}{2}$</span>.
+                                            Distribusi ini memiliki fungsi kepadatan sebagai berikut :
+                                            <span class="text-primary">
+                                            $$f(x|\mu,\sigma,v)=\frac{1}{\sqrt(2\pi)\sigma|\mu|^\frac{v}{2}}exp\left[-\frac{(x-\mu)^2}{2\sigma^2|\mu|^v}\right]$$
+                                            $$\text{ untuk } -\infty < x < \infty, \text{ dimana } -\infty < \mu < \infty, \sigma > 0, \text { dan } -\infty < v < \infty$$
+                                        </span>
+                                            Varian dari Distribusi ini adalah
+                                            <span class="text-primary">
+                                            $$Var(X)=\sigma^2|\mu|^v, \text{ sehingga Standar Deviasinya adalah  } \sigma|\mu|^\frac{v}{2}$$
+                                        </span>
+                                        </p>
+                                        <div class="card mt-3">
+                                            <div class="card-header bg-primary text-white">
+                                                Visualisasi Distribusi NOF $N(\mu,\sigma, v)$
+                                            </div>
+                                            <div class="card-body bg-light">
+                                                <div class="row mt-3">
+                                                    <div class="col-md-6 bg-white p-2">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label>Sample $(N)$</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.n_dash_nof"
+                                                                           min="100" value="100">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label>$(\mu)$</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.mu_dash_nof"
+                                                                           min="1" value="5">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label>$(\sigma)$</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.sigma_dash_nof"
+                                                                           min="1" value="1">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group">
+                                                                    <label>$(v)$</label>
+                                                                    <input type="number" class="form-control mt-2"
+                                                                           id="input.v_dash_nof"
+                                                                           min="1" value="3">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="hist.dash_nof" class="shiny-plot-output"
+                                                             style="width: 100%; height: 300px"></div>
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label>Min $x$</label>
+                                                                    <input type="number" class="form-control"
+                                                                           value="-50"
+                                                                           id="input.min_x_dash_nof">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6"></div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <label>Max $x$</label>
+                                                                    <input type="number" class="form-control"
+                                                                           value="100"
+                                                                           id="input.max_x_dash_nof">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <span class="badge badge-info p-2 mt-2">Fungsi Kepadatan NOF</span>
+                                                        <span class="text-primary">
+                                                        $$f(x|\mu,\sigma,v)=\frac{1}{\sqrt(2\pi)\sigma|\mu|^\frac{v}{2}}exp\left[-\frac{(x-\mu)^2}{2\sigma^2|\mu|^v}\right]$$
+                                                        $$\text{ untuk } -\infty < x < \infty, $$
+                                                        $$\text{ dimana } -\infty < \mu < \infty, \sigma > 0, \text { dan } -\infty < v < \infty$$
+                                                    </span>
+                                                        <span class="badge badge-info p-2 mt-2">Summary Data</span>
+                                                        <pre class="shiny-text-output text-danger mt-2"
+                                                             id="output.sum_dash_nof"></pre>
+                                                        <span class="badge badge-info p-2 mt-2">Varian</span>
+                                                        <pre class="shiny-text-output text-danger mt-2"
+                                                             id="output.var_dash_nof"></pre>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer section start-->
+<footer class="dashboard">
+    <p>&copy 2020 Collective. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank"
+                                                                 class="text-primary">W3layouts.</a>, Edited By Our Team
+    </p>
+</footer>
+<!--footer section end-->
+<!-- move top -->
+<button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
+    <span class="fa fa-angle-up"></span>
+</button>
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("movetop").style.display = "block";
+        } else {
+            document.getElementById("movetop").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+<!-- /move top -->
+
+
+<script src="assets/js/jquery-1.10.2.min.js"></script>
+
+<!-- chart js -->
+<script src="assets/js/Chart.min.js"></script>
+<script src="assets/js/utils.js"></script>
+<!-- //chart js -->
+
+<script src="assets/js/jquery.nicescroll.js"></script>
+<script src="assets/js/scripts.js"></script>
+
+<!-- close script -->
+<script>
+    var closebtns = document.getElementsByClassName("close-grid");
+    var i;
+
+    for (i = 0; i < closebtns.length; i++) {
+        closebtns[i].addEventListener("click", function () {
+            this.parentElement.style.display = 'none';
+        });
+    }
+</script>
+<!-- //close script -->
+
+<!-- disable body scroll when navbar is in active -->
+<script>
+    $(function () {
+        $('.sidebar-menu-collapsed').click(function () {
+            $('body').toggleClass('noscroll');
+        })
+    });
+</script>
+<!-- disable body scroll when navbar is in active -->
+
+<!-- loading-gif Js -->
+<script src="assets/js/modernizr.js"></script>
+<script>
+    $(window).load(function () {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut("slow");
+        ;
+    });
+    $(".custom-file-input").on("change", function () {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+    $("#input_type").on('change', function () {
+        if ($(this).val() === "csv") {
+            $("#data_r-area").hide();
+            $("#local_file-area").show();
+        } else {
+            $("#data_r-area").show();
+            $("#local_file-area").hide();
+        }
+    });
+</script>
+<!--// loading-gif Js -->
+
+<!-- Bootstrap Core JavaScript -->
+<script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -11,10 +11,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e36a5bb-d6e5-45ff-85f7-542e4537cc63" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.Rhistory" beforeDir="false" afterPath="$PROJECT_DIR$/../.Rhistory" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rsconnect/shinyapps.io/muhamatabdulrohim/midsemesterprobabilityproject.dcf" beforeDir="false" afterPath="$PROJECT_DIR$/../rsconnect/shinyapps.io/muhamatabdulrohim/midsemesterprobabilityproject.dcf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/css/style-starter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/Preloader_11.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/avatar1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/avatar2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/avatar3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/avatar4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/avatar5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/avatar6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/avatar7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/cart.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/content.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/dashboard.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/desk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/people1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/people2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/people3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/people4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/profileimg-big.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/profileimg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/sort_asc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/sort_both.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/sort_desc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/team.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/team2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/team3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/team4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/template1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/images/template2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/js/Chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/js/bar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/js/jquery-1.10.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/js/jquery.nicescroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/js/linechart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/js/modernizr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/assets/js/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/referensi/andi_setiawan.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data-table/referensi/gamlss.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server.R" beforeDir="false" afterPath="$PROJECT_DIR$/../server.R" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/him.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/him.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,8 +91,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data-table" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\GITHUB\KomputasiStatistik\www\data-table" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -61,6 +113,7 @@
       <workItem from="1603457991076" duration="9586000" />
       <workItem from="1604105681805" duration="13437000" />
       <workItem from="1623675637868" duration="209000" />
+      <workItem from="1623676210742" duration="8381000" />
     </task>
     <servers />
   </component>
